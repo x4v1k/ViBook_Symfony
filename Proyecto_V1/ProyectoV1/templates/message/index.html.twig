@@ -1,0 +1,16 @@
+{# templates/message/index.html.twig #}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>mensaje[0].Apartado</title>
+</head>
+<body>
+    <h1>{{ controller_name }}</h1>
+    <ul>
+        {% for mensaje in mensajes %}
+        <h1>Bienvenido al apartado {{ mensaje.Apartado }}</h1>
+            <li>{{ mensaje.Contenido }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

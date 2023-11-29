@@ -1,0 +1,27 @@
+{# templates/usuarios/crear.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Crear Usuario{% endblock %}
+
+{% block body %}
+    <div style="max-width: 400px; margin: auto; margin-top: 50px;">
+        <h1 class="text-center mb-4">Crear Usuario</h1>
+
+        {# Formulario de creación de usuario utilizando Symfony Forms #}
+        {{ form_start(form, {'attr': {'class': 'form'}}) }}
+
+        <div class="mb-3">
+            {{ form_label(form.nombre, 'Nombre') }}
+            {{ form_widget(form.nombre, {'attr': {'class': 'form-control', 'placeholder': 'Ingresa el nombre', 'required': true}}) }}
+        </div>
+
+        {# Agrega aquí los demás campos del formulario según tus necesidades #}
+
+        <button type="submit" class="btn btn-primary btn-block">Crear Usuario</button>
+        {{ form_end(form) }}
+
+        {# Enlace para volver a la lista de usuarios #}
+        <a href="{{ path('listar_usuarios') }}" class="btn btn-secondary btn-block mt-3">Volver a la lista de usuarios</a>
+    </div>
+{% endblock %}

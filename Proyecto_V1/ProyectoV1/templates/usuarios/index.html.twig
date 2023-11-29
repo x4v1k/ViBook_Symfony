@@ -1,0 +1,16 @@
+{# templates/message/index.html.twig #}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Listado de Usuarios</title>
+</head>
+<body>
+    <h1>{{ controller_name }}</h1>
+    <h2>Listado de Usuarios:</h2>
+    <ul>
+        {% for usuario in mensajes %}
+            <li>{{ usuario.nombreUsuario }} - {{ usuario.correo }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
