@@ -22,8 +22,8 @@ class UsuariosForm extends AbstractType
             ->add('correo', EmailType::class, [
                 'label' => 'Correo Electrónico',
             ])
-            ->add('contraseña', PasswordType::class, [
-                'label' => 'Contraseña',
+            ->add('password', PasswordType::class, [
+                'label' => 'Password',
             ]);
     }
 

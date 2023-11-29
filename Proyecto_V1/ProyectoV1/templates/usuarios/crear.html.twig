@@ -12,11 +12,21 @@
         {{ form_start(form, {'attr': {'class': 'form'}}) }}
 
         <div class="mb-3">
-            {{ form_label(form.nombre, 'Nombre') }}
-            {{ form_widget(form.nombre, {'attr': {'class': 'form-control', 'placeholder': 'Ingresa el nombre', 'required': true}}) }}
+            {{ form_label(form.nombre_usuario, 'Nombre') }}
+            {{ form_widget(form.nombre_usuario, {'attr': {'class': 'form-control', 'placeholder': 'Ingresa el nombre', 'required': true}}) }}
         </div>
 
-        {# Agrega aquí los demás campos del formulario según tus necesidades #}
+        <div class="mb-3">
+            {{ form_label(form.password, 'Contraseña') }}
+            {{ form_widget(form.password, {'attr': {'class': 'form-control', 'placeholder': 'Ingresa la contraseña', 'required': true}}) }}
+        </div>
+
+        <div class="mb-3">
+            {{ form_label(form.correo, 'Correo Electrónico') }}
+            {{ form_widget(form.correo, {'attr': {'class': 'form-control', 'placeholder': 'Ingresa el correo', 'required': true}}) }}
+        </div>
+
+        {# Otros campos según tus necesidades #}
 
         <button type="submit" class="btn btn-primary btn-block">Crear Usuario</button>
         {{ form_end(form) }}

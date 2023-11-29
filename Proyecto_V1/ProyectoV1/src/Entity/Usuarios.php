@@ -38,9 +38,9 @@ class Usuarios
     /**
      * @var string|null
      *
-     * @ORM\Column(name="contraseña", type="string", length=255, nullable=true)
+     * @ORM\Column(name="password", type="string", length=255, nullable=true)
      */
-    private $contraseña;
+    private $password;
 
     public function getId(): ?int
     {
@@ -71,14 +71,14 @@ class Usuarios
         return $this;
     }
 
-    public function getContraseña(): ?string
+    public function getPassword(): ?string
     {
-        return $this->contraseña;
+        return $this->password;
     }
 
-    public function setContraseña(?string $contraseña): static
+    public function setPassword(?string $password): static
     {
-        $this->contraseña = $contraseña;
+        $this->password = $password;
 
         return $this;
     }
